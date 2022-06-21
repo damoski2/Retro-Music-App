@@ -35,9 +35,10 @@ const styles = StyleSheet.create({
   },
 
   innerView: {
+    flex: .4,
     alignContent: "center",
     alignItems: "center",
-    height: '',
+    height: 400,
   },
 
   logoCnt: {
