@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { View, StyleSheet } from 'react-native'
 import AnimatedLoader from 'react-native-animated-loader'
+import { GlobalContext } from '../../context/GlobalContext'
 
 const LoadingDots = () => {
 
-  const [visible, setVisible] = useState(false);
+  const { loading, clearLoading, setPage } = useContext(GlobalContext);
 
-/*   useEffect(()=>{
-    setInterval(()=>{
-      setVisible(!visible)
-    },6000)
+  useEffect(()=>{
+    setTimeout(()=>{
+      clearLoading()
+      setPage('home')
+    },3000)
   },[])
- */
+
   return (
     <View style={styles.container} >
       {/*   <View style={styles.dot} ></View>
